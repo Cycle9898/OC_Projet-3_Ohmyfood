@@ -1,6 +1,12 @@
-/*Google fonts Roboto and Shrikhand*/
+/*Import Google fonts Roboto and Shrikhand*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap");
-/*Main CSS*/
+/*Roboto font apply*/
 body {
   font-family: "Roboto", sans-serif;
+}
+
+/*General settings*/
+a {
+  color: black;
+  text-decoration: none;
 }

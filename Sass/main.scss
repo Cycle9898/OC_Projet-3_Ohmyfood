@@ -1,13 +1,8 @@
-/*Google fonts Roboto and Shrikhand*/
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
-
-/*Main CSS*/
-
 //Utils imports
 
 @import "./utils/variables";
 
 //Base imports
 
-@import "./base/fontapply";
+@import "./base/font-apply";
+@import "./base/general-settings";
