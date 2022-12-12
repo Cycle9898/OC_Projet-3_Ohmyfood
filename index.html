@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="CSS/normalize.min.css">
-    <link rel="stylesheet" href="CSS/style.css"> <!--Use Minify for this-->
-    <link rel="icon" href="Images/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/CSS/normalize.min.css">
+    <link rel="stylesheet" href="/CSS/style.css"> <!--Use Minify for this-->
+    <link rel="icon" href="/Images/logo/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2ace82d5de.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood! - Accueil</title>
@@ -14,8 +14,10 @@
 <body>
     <div class="main-container">
         <header>
-            <div class="logo-omf">
-                <img src="Images/logo/ohmyfood.png" alt="Logo de Ohmyfood!">
+            <div class="header">
+                <div class="header__logo">
+                    <img src="/Images/logo/ohmyfood.png" alt="Logo de Ohmyfood!">
+                </div>
             </div>
         </header>
 
@@ -23,10 +25,10 @@
             <section class="intro">
                 <form action="#" class="location">
                     <i class="fa-solid fa-location-dot"></i>
-                    <input type="search" value="Paris, Belleville">
+                    <input type="search" name="location-in" id="location_in" value="Paris, Belleville">
                 </form>
 
-                <ul class="cta">
+                <ul class="intro__cta">
                     <li>
                         <h1>Réservez le menu qui vous convient</h1>
                     </li>
@@ -46,7 +48,7 @@
             <section class="operation">
                 <h2>Fonctionnement</h2>
 
-                <ul>
+                <ul class="operation__list">
                     <li>
                         <span>1</span>
                         <i class="fa-solid fa-mobile-screen-button"></i>
@@ -67,18 +69,18 @@
                 </ul>
             </section>
 
-            <section class="restaurant" id="restau-anchor">
+            <section class="restaurants" id="restau-anchor">
                 <h2>Restaurants</h2>
-                <ul>
+                <ul class="restaurants__list">
                     <li>
-                        <a href="Menus/menu_la-palette-du-gout.html">
-                            <article>
-                                <div>
+                        <a href="/Menus/menu_la-palette-du-gout.html">
+                            <article class="restau-card">
+                                <div class="restau-card__img">
                                     <img src="" alt="La palette du goût">
                                     <span>Nouveau</span>
                                 </div>
 
-                                <ul>
+                                <ul class="restau-card__txt">
                                     <li>
                                         <h3>La palette du goût</h3>
                                         <p>Ménilmontant</p>
@@ -91,14 +93,14 @@
                     </li>
 
                     <li>
-                        <a href="Menus/menu_la-note-enchantee.html">
-                            <article>
-                                <div>
+                        <a href="/Menus/menu_la-note-enchantee.html">
+                            <article class="restau-card">
+                                <div class="restau-card__img">
                                     <img src="" alt="La note enchantée">
                                     <span>Nouveau</span>
                                 </div>
 
-                                <ul>
+                                <ul class="restau-card__txt">
                                     <li>
                                         <h3>La note enchantée</h3>
                                         <p>Charonne</p>
@@ -111,13 +113,13 @@
                     </li>
 
                     <li>
-                        <a href="Menus/menu_a-la-francaise.html">
-                            <article>
-                                <div>
+                        <a href="/Menus/menu_a-la-francaise.html">
+                            <article class="restau-card">
+                                <div class="restau-card__img">
                                     <img src="" alt="À la française">
                                 </div>
 
-                                <ul>
+                                <ul class="restau-card__txt">
                                     <li>
                                         <h3>À la française</h3>
                                         <p>Cité Rouge</p>
@@ -130,13 +132,13 @@
                     </li>
 
                     <li>
-                        <a href="Menus/menu_le-delice-des-sens.html">
-                            <article>
-                                <div>
+                        <a href="/Menus/menu_le-delice-des-sens.html">
+                            <article class="restau-card">
+                                <div class="restau-card__img">
                                     <img src="" alt="Le délice des sens">
                                 </div>
 
-                                <ul>
+                                <ul class="restau-card__txt">
                                     <li>
                                         <h3>Le délice des sens</h3>
                                         <p>Folie-Méricourt</p>
