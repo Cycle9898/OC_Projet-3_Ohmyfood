@@ -1,0 +1,54 @@
+/*Restaurants section*/
+
+.restaurants {
+    display: flex;
+    flex-direction: column;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+
+        @include for-device(tablet) {
+            flex-flow: row wrap;
+        }
+
+        @include for-device(desktop) {
+            flex-wrap: nowrap;
+        }
+
+        >li {
+            @include for-device(tablet) {
+                width: 49%;
+            }
+
+            @include for-device(desktop) {
+                width: 25%;
+            }
+        }
+    }
+}
+
+.restau-card {
+
+    &__img {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        span {
+            position: absolute;
+            top: 8px; //revoir dimensions
+            right: 8px;
+
+        }
+    }
+
+    &__txt {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

@@ -1,8 +1,21 @@
 //Utils imports
 
 @import "./utils/variables";
+@import "./utils/mixins";
 
 //Base imports
 
-@import "./base/font-apply";
 @import "./base/general-settings";
+
+//Layouts imports
+
+@import "./layouts/header";
+@import "./layouts/footer";
+
+//Home page layouts
+@import "./layouts/intro-section";
+@import "./layouts/operation-section";
+@import "./layouts/restaurants-section";
+
+//Menu pages layout
+@import "./layouts/restau-main-section";

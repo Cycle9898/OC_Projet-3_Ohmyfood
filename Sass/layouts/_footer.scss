@@ -1,0 +1,31 @@
+/*Footer*/
+
+.footer {
+    @include for-device(tablet) {
+        text-align: center;
+    }
+
+    &__menu {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1vh;
+
+        @include for-device(tablet) {
+            flex-flow: row wrap;
+            text-align: center;
+
+        }
+
+        >li {
+            @include for-device(tablet) {
+                width: 50%;
+
+            }
+
+            @include for-device(desktop) {
+                width: 25%;
+            }
+        }
+
+    }
+}

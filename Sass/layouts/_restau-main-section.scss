@@ -1,0 +1,96 @@
+/*Restau-main section*/
+
+.restau-main {
+    &__img {
+        img {
+            width: 100%;
+        }
+    }
+
+    &__menu {
+        &__main-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            @include for-device(tablet) {
+                justify-content: center;
+                gap: 3vw;
+            }
+        }
+
+        &__parts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            >li {
+                width: 100%;
+            }
+
+            @include for-device(desktop) {
+                flex-direction: row;
+                align-items: initial;
+                gap: 1vw;
+
+                >li {
+                    width: 33%;
+                }
+            }
+        }
+    }
+
+    &__cta {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.meals {
+    &__title {
+        @include for-device(desktop) {
+            text-align: center;
+        }
+
+        &__underline {
+            width: 60px;
+            height: 6px;
+            background-color: $tertiary-color;
+
+            @include for-device(desktop) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+
+        &__main {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            span {
+                align-self: flex-end;
+            }
+
+            &:hover+.meals__card__check {
+                display: block;
+            }
+
+        }
+
+        &__check {
+            display: none;
+            background-color: $tertiary-color;
+
+            i {
+                border-radius: 50%;
+                background-color: white;
+                color: $tertiary-color;
+            }
+        }
+    }
+}

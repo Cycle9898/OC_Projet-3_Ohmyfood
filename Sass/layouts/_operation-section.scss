@@ -1,0 +1,30 @@
+/*Operation section*/
+
+.operation {
+    display: flex;
+    flex-direction: column;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 1vw;
+
+        @include for-device(tablet) {
+            flex-direction: row;
+        }
+
+        @include for-device(desktop) {
+            justify-content: center;
+        }
+
+        >li {
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+
+            @include for-device(desktop) {
+                width: 33.33%;
+            }
+        }
+    }
+}

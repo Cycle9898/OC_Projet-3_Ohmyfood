@@ -1,12 +1,226 @@
-/*Import Google fonts Roboto and Shrikhand*/
+/*General settings*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap");
-/*Roboto font apply*/
 body {
   font-family: "Roboto", sans-serif;
 }
 
-/*General settings*/
 a {
   color: black;
   text-decoration: none;
+}
+
+.main-container {
+  min-width: 350px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/*Header*/
+.header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.header__logo {
+  grid-column: 2/3;
+  place-self: center;
+}
+.header__home {
+  grid-column: 1/2;
+  align-self: center;
+}
+
+/*Footer*/
+@media (min-width: 768.1px) {
+  .footer {
+    text-align: center;
+  }
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1vh;
+}
+@media (min-width: 768.1px) {
+  .footer__menu {
+    flex-flow: row wrap;
+    text-align: center;
+  }
+}
+@media (min-width: 768.1px) {
+  .footer__menu > li {
+    width: 50%;
+  }
+}
+@media (min-width: 992.1px) {
+  .footer__menu > li {
+    width: 25%;
+  }
+}
+
+/*Intro section*/
+.location {
+  display: flex;
+  gap: 1vw;
+  justify-content: center;
+}
+
+.intro__cta {
+  text-align: center;
+}
+
+/*Operation section*/
+.operation {
+  display: flex;
+  flex-direction: column;
+}
+.operation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+@media (min-width: 768.1px) {
+  .operation__list {
+    flex-direction: row;
+  }
+}
+@media (min-width: 992.1px) {
+  .operation__list {
+    justify-content: center;
+  }
+}
+.operation__list > li {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+@media (min-width: 992.1px) {
+  .operation__list > li {
+    width: 33.33%;
+  }
+}
+
+/*Restaurants section*/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+@media (min-width: 768.1px) {
+  .restaurants__list {
+    flex-flow: row wrap;
+  }
+}
+@media (min-width: 992.1px) {
+  .restaurants__list {
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 768.1px) {
+  .restaurants__list > li {
+    width: 49%;
+  }
+}
+@media (min-width: 992.1px) {
+  .restaurants__list > li {
+    width: 25%;
+  }
+}
+
+.restau-card__img {
+  position: relative;
+}
+.restau-card__img img {
+  width: 100%;
+}
+.restau-card__img span {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.restau-card__txt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Restau-main section*/
+.restau-main__img img {
+  width: 100%;
+}
+.restau-main__menu__main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (min-width: 768.1px) {
+  .restau-main__menu__main-title {
+    justify-content: center;
+    gap: 3vw;
+  }
+}
+.restau-main__menu__parts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restau-main__menu__parts > li {
+  width: 100%;
+}
+@media (min-width: 992.1px) {
+  .restau-main__menu__parts {
+    flex-direction: row;
+    align-items: initial;
+    gap: 1vw;
+  }
+  .restau-main__menu__parts > li {
+    width: 33%;
+  }
+}
+.restau-main__cta {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 992.1px) {
+  .meals__title {
+    text-align: center;
+  }
+}
+.meals__title__underline {
+  width: 60px;
+  height: 6px;
+  background-color: #99E2D0;
+}
+@media (min-width: 992.1px) {
+  .meals__title__underline {
+    width: 100%;
+  }
+}
+.meals__card {
+  display: flex;
+  align-items: center;
+}
+.meals__card__main {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.meals__card__main span {
+  align-self: flex-end;
+}
+.meals__card__main:hover + .meals__card__check {
+  display: block;
+}
+.meals__card__check {
+  display: none;
+  background-color: #99E2D0;
+}
+.meals__card__check i {
+  border-radius: 50%;
+  background-color: white;
+  color: #99E2D0;
 }

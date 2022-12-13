@@ -1,0 +1,16 @@
+/*Header*/
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__logo {
+        grid-column: 2 / 3;
+        place-self: center;
+    }
+
+    &__home {
+        grid-column: 1 / 2;
+        align-self: center;
+    }
+}

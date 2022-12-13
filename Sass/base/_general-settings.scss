@@ -1,6 +1,19 @@
 /*General settings*/
 
+//Import Google fonts Roboto and Shrikhand
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Shrikhand&display=swap');
+
+body {
+    font-family: $main-font;
+}
+
 a {
     color: black;
     text-decoration: none;
+}
+
+.main-container {
+    min-width: 350px;
+    max-width: 1400px;
+    margin: auto;
 }

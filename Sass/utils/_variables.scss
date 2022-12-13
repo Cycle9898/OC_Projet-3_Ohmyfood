@@ -1,10 +1,17 @@
 //Colors
 
-$Primary-color: #9356DC;
-$Secondary-color: #FF79DA;
-$Tertiary-color: #99E2D0;
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
 
 //Fonts
 
 $main-font: 'Roboto', sans-serif;
 $title-font: 'Shrikhand', sans-serif;
+
+//Breakpoints
+
+$breakpoints: (
+    tablet: 768.1px,
+    desktop: 992.1px
+);
