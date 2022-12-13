@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  margin: 0px;
+}
+
 .main-container {
   min-width: 350px;
   max-width: 1400px;
@@ -19,14 +23,40 @@ a {
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding: 25px 3vw 15px;
+}
+.header__home {
+  grid-column: 1/2;
+  align-self: center;
+  font-size: 1.2rem;
+}
+.header__home > a {
+  display: inline-block;
+  padding: 15px 15px;
+}
+.header__home > a > span {
+  display: none;
+}
+@media (min-width: 992.1px) {
+  .header__home > a > span {
+    display: inline;
+  }
+  .header__home > a > span > i {
+    margin-right: 12px;
+  }
+}
+@media (min-width: 992.1px) {
+  .header__home > a > .fa-arrow-left {
+    display: none;
+  }
 }
 .header__logo {
   grid-column: 2/3;
   place-self: center;
 }
-.header__home {
-  grid-column: 1/2;
-  align-self: center;
+.header__logo > img {
+  width: auto;
+  height: 1.9rem;
 }
 
 /*Footer*/

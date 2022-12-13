@@ -3,14 +3,45 @@
 .header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    &__logo {
-        grid-column: 2 / 3;
-        place-self: center;
-    }
+    padding: 25px 3vw 15px;
 
     &__home {
         grid-column: 1 / 2;
         align-self: center;
+        font-size: 1.2rem;
+
+        >a {
+            display: inline-block;
+            padding: 15px 15px;
+
+            >span {
+                display: none;
+
+                @include for-device(desktop) {
+                    display: inline;
+
+                    >i {
+                        margin-right: 12px;
+                    }
+                }
+            }
+
+            @include for-device(desktop) {
+                >.fa-arrow-left {
+                    display: none;
+                }
+            }
+
+        }
+    }
+
+    &__logo {
+        grid-column: 2 / 3;
+        place-self: center;
+
+        >img {
+            width: auto;
+            height: 1.9rem;
+        }
     }
 }
