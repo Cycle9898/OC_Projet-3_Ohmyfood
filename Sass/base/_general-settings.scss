@@ -12,7 +12,11 @@ a {
     text-decoration: none;
 }
 
-ul {
+ul,
+h1,
+h2,
+h3,
+p {
     margin: 0px;
 }
 
@@ -20,4 +24,12 @@ ul {
     min-width: 350px;
     max-width: 1400px;
     margin: auto;
+
+    @include for-device(tablet) {
+        padding: 0px 50px;
+    }
+
+    @include for-device(desktop) {
+        padding: 0px 75px;
+    }
 }

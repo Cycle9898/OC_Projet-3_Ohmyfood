@@ -1,0 +1,12 @@
+/*Buttons*/
+
+//Main button
+.btn-action {
+    display: inline-block;
+    background: linear-gradient($secondary-color, $primary-color);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 6px 6px $box-shadow;
+    @include font-set(1rem, 500);
+}

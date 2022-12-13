@@ -2,10 +2,43 @@
 
 .location {
     display: flex;
-    gap: 1vw;
+    gap: 20px;
     justify-content: center;
+    background-color: $location-bg-color;
+    padding: 15px 0px;
+    box-shadow: 0px 3px 3px $box-shadow inset;
+
+    input {
+        background-color: inherit;
+        border: none;
+        @include font-set(1rem, 500);
+    }
+
+    @include for-device(tablet) {
+        border-radius: 25px 25px 0px 0px;
+    }
 }
 
 .intro__cta {
     text-align: center;
+    background-color: $section-bg-color;
+    padding: 40px 40px 55px;
+
+    h1 {
+        margin-bottom: 20px;
+        @include font-set(1.6rem, 700)
+    }
+
+    p {
+        margin-bottom: 30px;
+        @include font-set(1rem)
+    }
+
+    a {
+        padding: 17px 20px;
+    }
+
+    @include for-device(tablet) {
+        border-radius: 0px 0px 25px 25px;
+    }
 }
