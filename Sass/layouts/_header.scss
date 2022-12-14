@@ -21,7 +21,7 @@
                     display: inline;
 
                     &:hover {
-                        text-decoration: underline;
+                        text-decoration: underline double $tertiary-color;
                     }
 
                     >i {
