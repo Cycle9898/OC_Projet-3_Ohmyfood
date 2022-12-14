@@ -30,6 +30,6 @@ p {
     }
 
     @include for-device(desktop) {
-        padding: 0px 75px;
+        padding: 0px 25px;
     }
 }

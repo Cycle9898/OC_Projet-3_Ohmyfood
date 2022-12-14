@@ -3,6 +3,7 @@
 .restaurants {
     display: flex;
     flex-direction: column;
+    background-color: $section-bg-color;
 
     &__list {
         display: flex;

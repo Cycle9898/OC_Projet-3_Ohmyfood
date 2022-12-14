@@ -20,6 +20,10 @@
                 @include for-device(desktop) {
                     display: inline;
 
+                    &:hover {
+                        text-decoration: underline;
+                    }
+
                     >i {
                         margin-right: 12px;
                     }
