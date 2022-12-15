@@ -19,9 +19,10 @@
 
                 @include for-device(desktop) {
                     display: inline;
+                    border-bottom: 4px solid transparent;
 
                     &:hover {
-                        text-decoration: underline double $tertiary-color;
+                        border-color: $tertiary-color;
                     }
 
                     >i {
