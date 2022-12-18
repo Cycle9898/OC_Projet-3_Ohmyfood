@@ -45,7 +45,7 @@ p {
   font-size: 1rem;
 }
 
-.fa-heart {
+.heart-btn {
   font-size: 1.3rem;
   cursor: pointer;
 }
@@ -54,7 +54,7 @@ p {
 .header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  padding: 25px 3vw 15px;
+  padding: 20px 0px 10px;
 }
 .header__home {
   grid-column: 1/2;
@@ -63,7 +63,7 @@ p {
 }
 .header__home > a {
   display: inline-block;
-  padding: 15px 15px;
+  padding: 6px 25px;
 }
 .header__home > a > span {
   display: none;
@@ -71,16 +71,18 @@ p {
 @media (min-width: 992.1px) {
   .header__home > a > span {
     display: inline;
-    border-bottom: 4px solid transparent;
-  }
-  .header__home > a > span:hover {
-    border-color: #99E2D0;
   }
   .header__home > a > span > i {
     margin-right: 12px;
   }
 }
 @media (min-width: 992.1px) {
+  .header__home > a {
+    border-bottom: 4px solid transparent;
+  }
+  .header__home > a:hover {
+    border-color: #99E2D0;
+  }
   .header__home > a > .fa-arrow-left {
     display: none;
   }
@@ -329,79 +331,210 @@ p {
   font-size: 1.3rem;
 }
 
-/*Restau-main section*/
-.restau-main__img img {
-  width: 100%;
+/*Restaurant main section*/
+.restau {
+  display: grid;
+  grid-template-rows: 220px 40px auto;
+  grid-template-columns: 100%;
 }
-.restau-main__menu__main-title {
+@media (min-width: 768.1px) {
+  .restau {
+    grid-template-rows: auto auto;
+  }
+}
+.restau__img {
+  grid-row: 1/3;
+  grid-column: 1/2;
+  height: 260px;
+}
+@media (min-width: 768.1px) {
+  .restau__img {
+    grid-row: 1/2;
+    place-self: center;
+    width: 600px;
+    height: 320px;
+  }
+}
+@media (min-width: 992.1px) {
+  .restau__img {
+    height: 420px;
+  }
+}
+.restau__img img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+@media (min-width: 768.1px) {
+  .restau__img img {
+    height: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+  }
+}
+@media (min-width: 992.1px) {
+  .restau__img img {
+    height: 400px;
+  }
+}
+.restau__menu {
+  padding: 40px 15px;
+  background-color: #F7F7F7;
+  border-radius: 40px 40px 0px 0px;
+  grid-row: 2/4;
+  grid-column: 1/2;
+  z-index: 2;
+}
+.restau__menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (min-width: 768.1px) {
-  .restau-main__menu__main-title {
-    justify-content: center;
-    gap: 3vw;
+  .restau__menu__title {
+    max-width: 600px;
+    margin: auto;
   }
 }
-.restau-main__menu__parts {
+.restau__menu__title > h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.76rem;
+  font-weight: 400;
+}
+.restau__menu__title > i {
+  margin-right: 20px;
+}
+.restau__menu__parts {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 }
-.restau-main__menu__parts > li {
+.restau__menu__parts > li {
   width: 100%;
 }
 @media (min-width: 992.1px) {
-  .restau-main__menu__parts {
+  .restau__menu__parts {
     flex-direction: row;
     align-items: initial;
-    gap: 1vw;
+    gap: 2%;
   }
-  .restau-main__menu__parts > li {
-    width: 33%;
+  .restau__menu__parts > li {
+    width: 32%;
   }
 }
-.restau-main__cta {
+.restau__menu__cta {
   text-align: center;
 }
+.restau__menu__cta > button {
+  padding: 15px 45px;
+}
 
-@media (min-width: 992.1px) {
-  .meals__title {
-    text-align: center;
+.meals {
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+@media (min-width: 768.1px) {
+  .meals {
+    max-width: 600px;
+    margin: auto;
+    align-items: center;
   }
 }
-.meals__title__underline {
-  width: 60px;
-  height: 6px;
-  background-color: #99E2D0;
+.meals__title {
+  margin-top: 40px;
 }
-@media (min-width: 992.1px) {
-  .meals__title__underline {
+.meals__title > h2 {
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
+}
+.meals__title > h2::after {
+  content: "";
+  width: 40px;
+  position: absolute;
+  left: 0px;
+  bottom: -7px;
+  border-bottom: 3px solid #99E2D0;
+}
+@media (min-width: 768.1px) {
+  .meals__title > h2::after {
     width: 100%;
   }
 }
 .meals__card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
-  align-items: center;
-}
-.meals__card__main {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
 }
-.meals__card__main span {
-  align-self: flex-end;
+.meals__card__main {
+  padding: 13px 0px 12px 11px;
+  display: flex;
+  width: 100%;
+}
+.meals__card__main:hover {
+  width: 80%;
 }
 .meals__card__main:hover + .meals__card__check {
-  display: block;
+  width: 20%;
+}
+@media (min-width: 992.1px) {
+  .meals__card__main {
+    flex-direction: column;
+  }
 }
 .meals__card__check {
-  display: none;
+  width: 0%;
+  padding: 23.5px 0px;
   background-color: #99E2D0;
+  border-radius: 0px 15px 15px 0px;
+  text-align: center;
+  overflow: hidden;
+}
+@media (min-width: 992.1px) {
+  .meals__card__check {
+    padding: 32px 0px;
+  }
 }
 .meals__card__check i {
+  padding: 2px;
   border-radius: 50%;
   background-color: white;
   color: #99E2D0;
+}
+
+.meal-name p, .meal-name h3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal-name {
+  white-space: nowrap;
+  width: 80%;
+}
+.meal-name h3 {
+  font-size: 1.15rem;
+  margin-bottom: 5px;
+}
+.meal-name p {
+  font-size: 0.9rem;
+}
+@media (min-width: 992.1px) {
+  .meal-name {
+    width: 100%;
+  }
+}
+
+.meal-price {
+  width: 20%;
+  align-self: flex-end;
+  text-align: end;
+  padding-right: 25px;
+  font-size: 0.95rem;
+  font-weight: 700;
 }

@@ -1,21 +1,72 @@
-/*Restau-main section*/
+/*Restaurant main section*/
 
-.restau-main {
+.restau {
+    display: grid;
+    grid-template-rows: 220px 40px auto;
+    grid-template-columns: 100%;
+
+    @include for-device (tablet) {
+        grid-template-rows: auto auto;
+    }
+
     &__img {
+        grid-row: 1 / 3;
+        grid-column: 1 / 2;
+        height: 260px;
+
+        @include for-device(tablet) {
+            grid-row: 1 / 2;
+            place-self: center;
+            width: 600px;
+            height: 320px;
+        }
+
+        @include for-device(desktop) {
+            height: 420px;
+        }
+
         img {
             width: 100%;
+            height: 260px;
+            object-fit: cover;
+
+            @include for-device(tablet) {
+                height: 300px;
+                border-radius: 15px;
+                margin-bottom: 20px;
+            }
+
+            @include for-device(desktop) {
+                height: 400px;
+            }
         }
     }
 
     &__menu {
-        &__main-title {
+        padding: 40px 15px;
+        background-color: $section-bg-color;
+        border-radius: 40px 40px 0px 0px;
+        grid-row: 2 / 4;
+        grid-column: 1 / 2;
+        z-index: 2;
+
+        &__title {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
             @include for-device(tablet) {
-                justify-content: center;
-                gap: 3vw;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            >h1 {
+                font-family: $title-font;
+                @include font-set (1.76rem);
+            }
+
+            >i {
+                margin-right: 20px;
             }
         }
 
@@ -23,6 +74,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 40px;
 
             >li {
                 width: 100%;
@@ -31,65 +83,136 @@
             @include for-device(desktop) {
                 flex-direction: row;
                 align-items: initial;
-                gap: 1vw;
+                gap: 2%;
 
                 >li {
-                    width: 33%;
+                    width: 32%;
+                }
+            }
+        }
+
+        &__cta {
+            text-align: center;
+
+            >button {
+                padding: 15px 45px;
+            }
+        }
+    }
+}
+
+.meals {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    @include for-device(tablet) {
+        max-width: 600px;
+        margin: auto;
+        align-items: center;
+    }
+
+    &__title {
+        margin-top: 40px;
+
+        >h2 {
+            margin-bottom: 7px;
+            text-transform: uppercase;
+            @include font-set(1rem);
+            position: relative;
+
+            &::after {
+                content: "";
+                width: 40px;
+                position: absolute;
+                left: 0px;
+                bottom: -7px;
+                border-bottom: 3px solid $tertiary-color;
+
+                @include for-device(tablet) {
+                    width: 100%;
                 }
             }
         }
     }
 
-    &__cta {
-        text-align: center;
-    }
-}
-
-.meals {
-    &__title {
-        @include for-device(desktop) {
-            text-align: center;
-        }
-
-        &__underline {
-            width: 60px;
-            height: 6px;
-            background-color: $tertiary-color;
-
-            @include for-device(desktop) {
-                width: 100%;
-            }
-        }
-    }
-
     &__card {
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0px 2px 8px $box-shadow-color;
         display: flex;
-        align-items: center;
+        width: 100%;
 
         &__main {
+            padding: 13px 0px 12px 11px;
             display: flex;
-            justify-content: space-between;
             width: 100%;
 
-            span {
-                align-self: flex-end;
+            &:hover {
+                width: 80%;
             }
 
             &:hover+.meals__card__check {
-                display: block;
+                width: 20%;
+            }
+
+            @include for-device(desktop) {
+                flex-direction: column;
             }
 
         }
 
         &__check {
-            display: none;
+            width: 0%;
+            padding: 23.5px 0px;
             background-color: $tertiary-color;
+            border-radius: 0px 15px 15px 0px;
+            text-align: center;
+            overflow: hidden;
+
+            @include for-device(desktop) {
+                padding: 32px 0px;
+            }
 
             i {
+                padding: 2px;
                 border-radius: 50%;
                 background-color: white;
                 color: $tertiary-color;
             }
         }
     }
+}
+
+%text-crush {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.meal-name {
+    white-space: nowrap;
+    width: 80%;
+
+    h3 {
+        @extend %text-crush;
+        font-size: 1.15rem;
+        margin-bottom: 5px;
+    }
+
+    p {
+        @extend %text-crush;
+        font-size: 0.9rem;
+    }
+
+    @include for-device(desktop) {
+        width: 100%;
+    }
+}
+
+.meal-price {
+    width: 20%;
+    align-self: flex-end;
+    text-align: end;
+    padding-right: 25px;
+    @include font-set (0.95rem, 700);
 }

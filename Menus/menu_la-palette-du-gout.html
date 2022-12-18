@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/CSS/normalize.min.css">
-    <link rel="stylesheet" href="/CSS/style.css"> <!--Use Minify for this-->
-    <link rel="icon" href="/Images/logo/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/normalize.min.css">
+    <link rel="stylesheet" href="../CSS/style.css"> <!--Use Minify for this-->
+    <link rel="icon" href="../Images/logo/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2ace82d5de.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood! - La palette du goût</title>
@@ -16,46 +16,46 @@
         <header>
             <div class="header">
                 <nav class="header__home">
-                    <a href="/index.html">
+                    <a href="../index.html">
                         <i class="fa-solid fa-arrow-left"></i>
                         <span><i class="fa-solid fa-house"></i>Accueil</span>
                     </a>
                 </nav>
 
                 <div class="header__logo">
-                    <img src="/Images/logo/ohmyfood.png" alt="Logo de Ohmyfood!">
+                    <img src="../Images/logo/ohmyfood.png" alt="Logo de Ohmyfood!">
                 </div>
             </div>
         </header>
 
         <main>
-            <section class="restau-main">
-                <div class="restau-main__img">
-                    <img src="" alt="Image de présentation du restaurant">
+            <section class="restau">
+                <div class="restau__img">
+                    <img src="../Images/restaurants/La-palette-du-gout_500.jpg"
+                        alt="Image de présentation du restaurant">
                 </div>
 
-                <div class="restau-main__menu">
-                    <div class="restau-main__menu__main-title">
+                <div class="restau__menu">
+                    <div class="restau__menu__title">
                         <h1>La palette du goût</h1>
-                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-heart heart-btn"></i>
                     </div>
 
-                    <ul class="restau-main__menu__parts">
+                    <ul class="restau__menu__parts">
                         <li>
                             <ul class="meals">
                                 <li class="meals__title">
                                     <h2>Entrées</h2>
-                                    <div class="meals__title__underline"></div>
                                 </li>
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Fricassée d'escargot</h3>
                                             <p>Au piment d'Espelette</p>
-                                        </span>
+                                        </div>
 
-                                        <span>25€</span>
+                                        <div class="meal-price">25€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -63,12 +63,12 @@
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Foie gras de canard mi-cuit</h3>
                                             <p>Et ses copeaux de truffe noire</p>
-                                        </span>
+                                        </div>
 
-                                        <span>35€</span>
+                                        <div class="meal-price">35€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -76,12 +76,12 @@
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Œuf au plat</h3>
                                             <p>Assaisonné à la truffe sur lit de caviar</p>
-                                        </span>
+                                        </div>
 
-                                        <span>20€</span>
+                                        <div class="meal-price">20€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -93,17 +93,16 @@
                             <ul class="meals">
                                 <li class="meals__title">
                                     <h2>Plats</h2>
-                                    <div class="meals__title__underline"></div>
                                 </li>
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Filet de boeuf aux herbes</h3>
                                             <p>Accompagné de sa ribambelle de légumes</p>
-                                        </span>
+                                        </div>
 
-                                        <span>40€</span>
+                                        <div class="meal-price">40€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -111,12 +110,12 @@
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Parmentier de queue de boeuf</h3>
                                             <p>À la truffe noire sur sa purée de panais</p>
-                                        </span>
+                                        </div>
 
-                                        <span>35€</span>
+                                        <div class="meal-price">35€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -124,12 +123,12 @@
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Filet de turbot</h3>
                                             <p>Aux agrumes</p>
-                                        </span>
+                                        </div>
 
-                                        <span>44€</span>
+                                        <div class="meal-price">44€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -141,17 +140,16 @@
                             <ul class="meals">
                                 <li class="meals__title">
                                     <h2>Desserts</h2>
-                                    <div class="meals__title__underline"></div>
                                 </li>
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Paris-Brest</h3>
                                             <p>Revisité</p>
-                                        </span>
+                                        </div>
 
-                                        <span>18€</span>
+                                        <div class="meal-price">18€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -159,12 +157,12 @@
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Macaron au chocolat d'exception</h3>
                                             <p>Et glace à la vanille de Madagascar</p>
-                                        </span>
+                                        </div>
 
-                                        <span>22€</span>
+                                        <div class="meal-price">22€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -172,12 +170,12 @@
 
                                 <li class="meals__card">
                                     <div class="meals__card__main">
-                                        <span>
+                                        <div class="meal-name">
                                             <h3>Mousse au chocolat</h3>
                                             <p>Au piment d'Espelette et à la truffe noire</p>
-                                        </span>
+                                        </div>
 
-                                        <span>23€</span>
+                                        <div class="meal-price">23€</div>
                                     </div>
 
                                     <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
@@ -185,10 +183,10 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
 
-                <div class="restau-main__cta">
-                    <button class="btn-action">Commander</button>
+                    <div class="restau__menu__cta">
+                        <button class="btn-action">Commander</button>
+                    </div>
                 </div>
             </section>
         </main>

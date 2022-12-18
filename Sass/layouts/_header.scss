@@ -3,7 +3,7 @@
 .header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 25px 3vw 15px;
+    padding: 20px 0px 10px;
 
     &__home {
         grid-column: 1 / 2;
@@ -12,18 +12,13 @@
 
         >a {
             display: inline-block;
-            padding: 15px 15px;
+            padding: 6px 25px;
 
             >span {
                 display: none;
 
                 @include for-device(desktop) {
                     display: inline;
-                    border-bottom: 4px solid transparent;
-
-                    &:hover {
-                        border-color: $tertiary-color;
-                    }
 
                     >i {
                         margin-right: 12px;
@@ -32,6 +27,12 @@
             }
 
             @include for-device(desktop) {
+                border-bottom: 4px solid transparent;
+
+                &:hover {
+                    border-color: $tertiary-color;
+                }
+
                 >.fa-arrow-left {
                     display: none;
                 }
