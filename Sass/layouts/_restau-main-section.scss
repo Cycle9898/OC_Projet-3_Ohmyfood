@@ -142,11 +142,13 @@
         box-shadow: 0px 2px 8px $box-shadow-color;
         display: flex;
         width: 100%;
+        @include meals-loading;
 
         &__main {
             padding: 13px 0px 12px 11px;
             display: flex;
             width: 100%;
+            transition: width 400ms ease-out;
 
             &:hover {
                 width: 80%;
@@ -154,6 +156,11 @@
 
             &:hover+.meals__card__check {
                 width: 20%;
+
+                >i {
+                    transform: rotate(360deg);
+                    transition: transform 400ms ease-out;
+                }
             }
 
             @include for-device(desktop) {
@@ -169,6 +176,7 @@
             border-radius: 0px 15px 15px 0px;
             text-align: center;
             overflow: hidden;
+            transition: width 400ms ease-out;
 
             @include for-device(desktop) {
                 padding: 32px 0px;
