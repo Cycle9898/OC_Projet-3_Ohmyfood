@@ -1,19 +1,65 @@
 /*Buttons*/
 
+%opacity-trans {
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        right: 0%;
+        bottom: 0%;
+        opacity: 0;
+    }
+}
+
 //Main button
+
+%btn-action-common {
+    border-radius: 30px;
+    border: none;
+}
+
 .btn-action {
     display: inline-block;
-    cursor: pointer;
-    background: linear-gradient($secondary-color, $primary-color);
+    @extend %btn-action-common;
     color: white;
-    border: none;
-    border-radius: 30px;
-    box-shadow: 0px 6px 12px $box-shadow-color;
     font-size: 1rem;
+    z-index: 1;
+    @extend %opacity-trans;
+    background: linear-gradient(175deg, $secondary-color, $primary-color);
+    box-shadow: 0px 4px 8px $box-shadow-color;
+
+    &::after {
+        @extend %btn-action-common;
+        content: "";
+        z-index: -1;
+        background: linear-gradient(175deg, $secondary-lgh-color, $primary-lgh-color);
+        box-shadow: 0px 5px 8px $box-shadow-color;
+        transition: opacity 300ms;
+    }
 }
 
 //Heart button
+
 .heart-btn {
     font-size: 1.3rem;
-    cursor: pointer;
+    @extend %opacity-trans;
+
+    &::after {
+        content: "\f004";
+        font-weight: 700;
+        background: linear-gradient($primary-color, $secondary-color);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: opacity 500ms;
+    }
 }
