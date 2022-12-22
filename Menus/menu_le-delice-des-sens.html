@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../CSS/normalize.min.css">
-    <link rel="stylesheet" href="../CSS/style.css"> <!--Use Minify for this-->
+    <link rel="stylesheet" href="../CSS/style.min.css">
     <link rel="icon" href="../Images/logo/favicon.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/2ace82d5de.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,10 +30,12 @@
 
         <main>
             <section class="restau">
-                <div class="restau__img">
-                    <img src="../Images/restaurants/Le-delice-des-sens_500.jpg"
+                <picture class="restau__img">
+                    <source srcset="../Images/restaurants/Le-delice-des-sens_1300.jpg" media="(min-width: 992.1px)">
+                    <source srcset="../Images/restaurants/Le-delice-des-sens_900.jpg" media="(min-width: 768.1px)">
+                    <img src="../Images/restaurants/Le-delice-des-sens_700.jpg"
                         alt="Image de présentation du restaurant">
-                </div>
+                </picture>
 
                 <div class="restau__menu">
                     <div class="restau__menu__title">
@@ -42,145 +44,133 @@
                     </div>
 
                     <ul class="restau__menu__parts">
-                        <li>
-                            <ul class="meals">
-                                <li class="meals__title">
-                                    <h2>Entrées</h2>
-                                </li>
+                        <li class="meals">
+                            <h2 class="meals__title">Entrées</h2>
 
-                                <li class="meals__card meals__card--1">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Tartare de thon</h3>
-                                            <p>Assaisonné au yuzu</p>
-                                        </div>
-
-                                        <div class="meal-price">25€</div>
+                            <article class="meals__card meals__card--1">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Tartare de thon</h3>
+                                        <p>Assaisonné au yuzu</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
+                                    <span class="meal-price">25€</span>
+                                </div>
 
-                                <li class="meals__card meals__card--2">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Bouchée de homard croustillant</h3>
-                                            <p>Et sa farandole de petits légumes</p>
-                                        </div>
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
 
-                                        <div class="meal-price">35€</div>
+                            <article class="meals__card meals__card--2">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Bouchée de homard croustillant</h3>
+                                        <p>Et sa farandole de petits légumes</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
+                                    <span class="meal-price">35€</span>
+                                </div>
 
-                                <li class="meals__card meals__card--3">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Velouté de cèpes</h3>
-                                            <p>Aux truffes</p>
-                                        </div>
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
 
-                                        <div class="meal-price">20€</div>
+                            <article class="meals__card meals__card--3">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Velouté de cèpes</h3>
+                                        <p>Aux truffes</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
-                            </ul>
+                                    <span class="meal-price">20€</span>
+                                </div>
+
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
                         </li>
 
-                        <li>
-                            <ul class="meals">
-                                <li class="meals__title">
-                                    <h2>Plats</h2>
-                                </li>
+                        <li class="meals">
+                            <h2 class="meals__title">Plats</h2>
 
-                                <li class="meals__card meals__card--1">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Poulet rôti aux herbes de Provence</h3>
-                                            <p>Et sa crème de truffe</p>
-                                        </div>
-
-                                        <div class="meal-price">40€</div>
+                            <article class="meals__card meals__card--1">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Poulet rôti aux herbes de Provence</h3>
+                                        <p>Et sa crème de truffe</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
+                                    <span class="meal-price">40€</span>
+                                </div>
 
-                                <li class="meals__card meals__card--2">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Langouste rôtie</h3>
-                                            <p>Et ses légumes de saison</p>
-                                        </div>
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
 
-                                        <div class="meal-price">35€</div>
+                            <article class="meals__card meals__card--2">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Langouste rôtie</h3>
+                                        <p>Et ses légumes de saison</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
+                                    <span class="meal-price">35€</span>
+                                </div>
 
-                                <li class="meals__card meals__card--3">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Côte de boeuf Angus</h3>
-                                            <p>Et sa purée de panais</p>
-                                        </div>
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
 
-                                        <div class="meal-price">44€</div>
+                            <article class="meals__card meals__card--3">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Côte de boeuf Angus</h3>
+                                        <p>Et sa purée de panais</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
-                            </ul>
+                                    <span class="meal-price">44€</span>
+                                </div>
+
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
                         </li>
 
-                        <li>
-                            <ul class="meals">
-                                <li class="meals__title">
-                                    <h2>Desserts</h2>
-                                </li>
+                        <li class="meals">
+                            <h2 class="meals__title">Desserts</h2>
 
-                                <li class="meals__card meals__card--1">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Farandole de desserts</h3>
-                                            <p>Du chef</p>
-                                        </div>
-
-                                        <div class="meal-price">18€</div>
+                            <article class="meals__card meals__card--1">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Farandole de desserts</h3>
+                                        <p>Du chef</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
+                                    <span class="meal-price">18€</span>
+                                </div>
 
-                                <li class="meals__card meals__card--2">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Crème brulée</h3>
-                                            <p>Revisitée</p>
-                                        </div>
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
 
-                                        <div class="meal-price">22€</div>
+                            <article class="meals__card meals__card--2">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Crème brulée</h3>
+                                        <p>Revisitée</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
+                                    <span class="meal-price">22€</span>
+                                </div>
 
-                                <li class="meals__card meals__card--3">
-                                    <div class="meals__card__main">
-                                        <div class="meal-name">
-                                            <h3>Tiramisu</h3>
-                                            <p>À la noisette</p>
-                                        </div>
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
 
-                                        <div class="meal-price">23€</div>
+                            <article class="meals__card meals__card--3">
+                                <div class="meals__card__main">
+                                    <div class="meal-name">
+                                        <h3>Tiramisu</h3>
+                                        <p>À la noisette</p>
                                     </div>
 
-                                    <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
-                                </li>
-                            </ul>
+                                    <span class="meal-price">23€</span>
+                                </div>
+
+                                <div class="meals__card__check"><i class="fa-solid fa-check"></i></div>
+                            </article>
                         </li>
                     </ul>
 

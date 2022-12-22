@@ -5,14 +5,14 @@
     background-color: $footer-bg-color;
     color: white;
 
+    @include for-device(tablet) {
+        text-align: center;
+    }
+
     >h3 {
         margin-bottom: 20px;
         font-family: $title-font;
         @include font-set(1.1rem);
-    }
-
-    @include for-device(tablet) {
-        text-align: center;
     }
 
     &__menu {

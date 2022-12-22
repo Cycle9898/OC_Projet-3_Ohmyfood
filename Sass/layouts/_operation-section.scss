@@ -28,6 +28,10 @@
             box-shadow: 0px 2px 8px $box-shadow-color;
             position: relative;
 
+            @include for-device(desktop) {
+                width: 33.33%;
+            }
+
             >span {
                 padding: 0.384rem 0.552rem 0.313rem;
                 background-color: $primary-color;
@@ -55,9 +59,6 @@
                 }
             }
 
-            @include for-device(desktop) {
-                width: 33.33%;
-            }
         }
     }
 }

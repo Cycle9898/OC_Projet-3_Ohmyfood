@@ -12,25 +12,3 @@
     font-size: $size;
     font-weight: $weight;
 }
-
-//Meals loading animation
-
-@mixin meals-loading {
-    @for $i from 1 through 4 {
-        &--#{$i} {
-            animation: meals-loading-kf 400ms cubic-bezier(0, .28, 1, 1) (200ms * $i) both;
-        }
-    }
-
-    @keyframes meals-loading-kf {
-        0% {
-            opacity: 0;
-            transform: translateY(20%);
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0%);
-        }
-    }
-}
