@@ -487,6 +487,11 @@ p {
     margin: auto;
   }
 }
+@media (min-width: 992.1px) {
+  .restau__menu__title {
+    max-width: 400px;
+  }
+}
 .restau__menu__title > h1 {
   font-family: "Shrikhand", sans-serif;
   font-size: 1.76rem;

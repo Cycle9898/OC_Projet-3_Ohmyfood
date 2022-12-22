@@ -43,6 +43,10 @@
                 margin: auto;
             }
 
+            @include for-device(desktop) {
+                max-width: 400px;
+            }
+
             >h1 {
                 font-family: $title-font;
                 @include font-set (1.76rem);
